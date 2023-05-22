@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*, *::after, *::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    background-color: grey;
+    height: 100vh;
+    flex-direction: column;
+    background-repeat: repeat;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+    height: 600px;
+    width: 600px;
+    position: relative;
+   
+}
+
+.btn-timer{
+    display: flex;
+    column-gap: 20px;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+button{
+    color: #fafafafa;
+    background-color: #151d2a;
+    border: 1px solid #151d2a;
+    width: 15%;
+    padding: 40xp 40px;
+    border-radius: 6px;
+    font-size: 1.5rem;
+
+}
+
+.timer-moves{
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    color: #151d2a;
+   
+}
+
+.main-box{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    row-gap: 5%;
+    column-gap: 7%;
+    width: 100%;
+    background-color: #151d2a;
+    height: 100%;
+    padding: 5px 5px;
+    border-radius: 6px;
+    box-shadow: 0px 12px 32px #151d2a;
+    perspective: 1000px;
+    
+}
+
+.box{
+    border: 1px solid orange;
+    width: 100px;
+    height: 100px;
+    background-color: #151d2a;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: transparent;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    backface-visibility: visible;
+
+}
+
+.box::active{
+    transform: scale(.97);
+    transition: transform .2s;
+}
+
+.flipped{
+    background-color: #fafafafa;
+    transform: rotateY(180deg);
+    color: initial;
+}
+
+h1{
+    visibility: hidden;
+    position: fixed;
+    top: 0px;
+    text-align: center;
+    width: 50%;
+    font-size: 4rem;
+    box-shadow: 0 0 0 0px rgba(0,0,0,0.3);
+    font-family: "Roboto", sans-serif;
+    color: #151d2a;
+    background-color: transparent;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+.win{
+    visibility:visible;
+}
+
+#my-canvas{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 10000;
+    pointer-events: none;
+}
+
+@media(max-width:768px){
+    main{
+        height: 350px;
+        width: 350px;
+        position: relative;
+       
+    }
+    .box{
+        width: 55px;
+        height: 55px;
+
+    }
+    .btn-timer{
+        margin-left: 20px;
+        column-gap: 20px;
+    }
+    button{
+        font-size: 1rem;
+    }
+}
+
+
